@@ -1,0 +1,144 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333; /* Cinza escuro */
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  color: white;
+  margin: 0;
+}
+
+nav ul { /*Navegador de paginas*/
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0;
+}
+
+.menu-item {
+  display: block;
+  padding: 15px 30px;
+  background-color: #3498db; /* Fundo azul */
+  color: white; /* Fonte branca */
+  text-decoration: none;
+  border: 1px solid #2980b9; /* Borda azul mais escura */
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: #2980b9; /* Fundo azul mais escuro no hover */
+}
+
+main {
+  padding: 20px;
+}
+
+section.projeto { /*define cor e borda para os links*/
+  margin-bottom: 20px; 
+  border: 1px solid #CCC;
+  padding: 10px;
+}
+
+section.projeto img { /*define define altura e largura e margem*/
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+section.projeto h3 { /*define a margem do H3*/
+  margin: 0;
+}
+
+section.projeto p { /*define margem do botao*/
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #F0F0F0;/*define a cor do rodapé e a margem*/
+  text-align: center;
+  padding: 20px;
+}
+
+footer p { /*define a cor do rodapé e a margem*/
+  margin: 0;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 400px;
+  margin-right: auto;
+  margin-right: 20px;
+  flex: 1; /* Ocupa todo o espaço restante disponível */
+  margin-right: 20px; /* Adiciona margem à direita para separar o formulário da imagem */
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input, textarea {/*define o tamanho do input descrição*/
+  padding: 10px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 150px;
+}
+
+button { /*define o estilo dos botões*/
+  width: auto;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.projeto-container {
+  display: flex;
+  justify-content: space-between; /* Distribui os itens uniformemente na linha */
+  flex-wrap: wrap; /* Permite que os itens quebrem para uma nova linha */
+}
+
+.projeto {
+  width: calc(48% - 1px); /* Define a largura de cada projeto, com uma margem de 10px entre eles */
+  margin-bottom: 5px; /* Adiciona margem inferior para separar os projetos */
+}
+
+.sobre-mim {
+  display: flex; /* Define o layout como flexível */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+.sobre-mim img {
+  max-width: 300px;
+  height: auto;
+  margin-right: 20px; /* Adiciona margem à direita da imagem para separá-la do texto */
+}
+
+.texto {
+  flex: 1; /* Ocupa todo o espaço restante disponível */
+}
+
+.form-container {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente os itens */
+}
+
+
