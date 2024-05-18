@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <!-- define o cabeçalho da pagina no geral-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Nicoleti Martins - Portfólio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Portifólio Pessoal - Thiago Nicoleti Martins</h1> <!-- Define o nome do Titulo da página -->
+        <nav>
+            <ul class="menu">  <!-- Define o menu da pagina -->
+                <li><a href="index.html" class="menu-item">Portfólio</a></li>
+                <li><a href="sobre-mim.html" class="menu-item">Sobre Mim</a></li>
+                <li><a href="experiencia.html" class="menu-item">Experiência</a></li>
+                <li><a href="contato.html" class="menu-item">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+          <!-- Define a experiência profissional por seção-->
+        <h1 style="text-align: center;">Experiência Profissional</h1>
+        <section class="experiencia">
+            <h3>Ennova Telecom</h3>
+            <li>Cargo: Gerente Comercial</li>
+            <p>Como gerente comercial, minha jornada foi repleta de desafios emocionantes e momentos de grande crescimento. Liderei equipes, tracei estratégias e me dediquei a cultivar relacionamentos duradouros com nossos clientes. Cada dia era uma nova aventura, uma oportunidade para superar obstáculos e alcançar novos patamares de sucesso. Trabalhando lado a lado com minha equipe, conseguimos conquistar resultados incríveis e elevar o nome da nossa empresa no mercado. Foi uma experiência inspiradora e transformadora que moldou quem sou hoje.<br>
+        <section class="experiencia">
+            <h3>ADT Security</h3>
+            <li>Cargo: Gerente Administrativo</li>
+            <p>Minha experiência como gerente administrativo foi marcada pela gestão eficaz de recursos e processos para garantir o funcionamento fluido e eficiente de nossa empresa. Como líder da equipe administrativa, fui responsável por supervisionar uma variedade de tarefas, desde gerenciamento de pessoal e controle de estoque até gestão financeira e coordenação de projetos. Cada dia era uma oportunidade para implementar melhorias, encontrar soluções criativas para desafios e garantir a conformidade com os padrões de qualidade e regulamentações. Trabalhando em estreita colaboração com outras áreas da empresa, conseguimos otimizar operações, reduzir custos e impulsionar a produtividade, contribuindo para o crescimento e sucesso de nossa organização.<br>
+        <section class="experiencia">
+            <section class="experiencia">
+                <h3>Certsys Tecnologia da Informação</h3>
+                <li>Cargo: Estágio em Desenvolvimento de Software</li>
+                <p>Como estagiário, estou atualmente imerso no mundo do desenvolvimento OutSystems e na qualidade de software. Sob a orientação experiente da equipe, mergulho diariamente em novos desafios tecnológicos. Estou constantemente aprendendo e expandindo minhas habilidades de programação, enquanto colaboro ativamente em projetos emocionantes. Como membro do time, assumo a responsabilidade de identificar e solucionar bugs, garantindo que nossos aplicativos atinjam os mais altos padrões de qualidade. Esta jornada está me proporcionando uma visão rica e prática do ciclo de vida do desenvolvimento de software, preparando-me para futuros desafios com entusiasmo e confiança.<br>
+            <section class="experiencia">
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Thiago Nicoleti</p>   <!-- nome rodapé -->
+    </footer>
+</body>
+</html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        // Função para remover classe ativa de todos os itens de menu
+        function removeActiveClass() {
+            menuItems.forEach(item => {
+                item.style.backgroundColor = '#3498db'; // Azul padrão
+            });
+        }
+
+        // Verifica em qual link esta do menu e aplica a funçao remover cor padrão
+        menuItems.forEach(item => {
+            item.addEventListener('click', function () {
+                removeActiveClass();
+                this.style.backgroundColor = '#5dade2'; // Azul mais apagado para o item selecionado
+            });
+        });
+
+         // Marca o link com base na url atual
+        const currentPath = window.location.pathname.split("/").pop();
+        menuItems.forEach(item => {
+            if (item.getAttribute('href') === currentPath) {
+                item.style.backgroundColor = '#5dade2'; // Azul mais apagado para o item selecionado
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- define o cabeçalho da pagina no geral-->
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Nicoleti Martins - Portfólio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Portifólio Pessoal - Thiago Nicoleti Martins</h1> <!-- Define o nome do Titulo da página -->
+        <nav>
+            <ul class="menu"> <!-- Define o menu da pagina -->
+                <li><a href="index.html" class="menu-item">Portfólio</a></li>
+                <li><a href="sobre-mim.html" class="menu-item">Sobre Mim</a></li>
+                <li><a href="experiencia.html" class="menu-item">Experiência</a></li>
+                <li><a href="contato.html" class="menu-item">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <contact>
+            <!-- Define o formulário do contato -->
+            <h1>Entre em Contato Comigo</h1>
+            <div class="form-container">
+                <form class="contact-form">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <br>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+                <br>
+                <button type="submit">Enviar</button>
+            </form>
+            <img src="img/Email-Open-mail-icon-Graphics-13342456-1.jpg" alt="e-mail" style="max-width: 600px; height: auto;"> <!-- Define a imagem do e-mail -->
+        </contact>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Thiago Nicoleti</p> <!-- Define o apresentado no rodapé -->
+    </footer>
+</body>
+</html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        // Função para remover classe ativa de todos os itens de menu
+        function removeActiveClass() {
+            menuItems.forEach(item => {
+                item.style.backgroundColor = '#3498db'; // Azul padrão
+            });
+        }
+
+        // Verifica em qual link esta do menu e aplica a funçao remover cor padrão
+        menuItems.forEach(item => {
+            item.addEventListener('click', function () {
+                removeActiveClass();
+                this.style.backgroundColor = '#5dade2'; // Azul mais apagado para o item selecionado
+            });
+        });
+
+        // Marca o link com base na url atual
+        const currentPath = window.location.pathname.split("/").pop();
+        menuItems.forEach(item => {
+            if (item.getAttribute('href') === currentPath) {
+                item.style.backgroundColor = '#5dade2'; // Azul mais apagado para o item selecionado
+            }
+        });
+    });
+</script>
+</body>
+</html>

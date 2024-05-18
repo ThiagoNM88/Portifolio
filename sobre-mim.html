@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- define o cabeçalho da pagina no geral-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Nicoleti Martins - Portfólio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Portifólio Pessoal - Thiago Nicoleti Martins</h1> <!-- Define o nome do Titulo da página -->
+        <nav>
+            <ul class="menu">  <!-- Define o menu da pagina -->
+                <li><a href="index.html" class="menu-item">Portfólio</a></li>
+                <li><a href="sobre-mim.html" class="menu-item">Sobre Mim</a></li>
+                <li><a href="experiencia.html" class="menu-item">Experiência</a></li>
+                <li><a href="contato.html" class="menu-item">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="sobre-mim">
+        <img src="img/foto_thiago.jpeg" alt="Perfil" style="max-width: 300px; height: auto;">   <!-- Exibi minha foto -->
+        <div class="texto">
+              <!-- Exibe o titulo e a descrição sobre mim -->
+            <h2>Sobre Mim</h2>
+            <p>Sou pai de um maravilhoso filho de 6 anos e casado com uma linda esposa que me apoia em tudo, também sou um profissional apaixonado por tecnologia, dedicado a buscar soluções criativas e eficientes para desafios complexos. Mesmo ainda em fase de estudos na área de Análise e Desenvolvimento de Sistemas, adquiri experiência em JAVA, JavaScript, HTML, CSS e entre outros, também atuo como estagiário em uma empresa de consultoria de tecnologia onde desenvolvi habilidades essenciais como desenvolvimento de sistemas robustos e escaláveis em Outsystems.
+
+Além do meu trabalho, tenho interesses variados que enriquecem minha vida pessoal e profissional. Sou um entusiasta da Astronomia, e busco constantemente novas formas de expandir meus conhecimentos e habilidades.
+
+Com uma mentalidade de aprendizado contínuo e uma abordagem proativa, estou sempre em busca de novas oportunidades para crescer e contribuir de forma significativa para projetos e equipes.</p>
+        </div>
+    </main>    
+
+    <footer>
+        <p>&copy; 2024 Thiago Nicoleti</p>   <!-- Nome rodapé -->
+    </footer>
+</body>
+</html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        // JavaScript para fazer a função de quando clicar no link o background fica um azul apagado
+        function removeActiveClass() {
+            menuItems.forEach(item => {
+                item.style.backgroundColor = '#3498db'; // Azul padrão
+            });
+        }
+
+        // // Verifica em qual link esta do menu e aplica a funçao remover cor padrão
+        menuItems.forEach(item => {
+            item.addEventListener('click', function () {
+                removeActiveClass();
+                this.style.backgroundColor = '#5dade2'; // Azul mais apagado para o item selecionado
+            });
+        });
+
+        //  // Marca o link com base na url atual
+        const currentPath = window.location.pathname.split("/").pop();
+        menuItems.forEach(item => {
+            if (item.getAttribute('href') === currentPath) {
+                item.style.backgroundColor = '#5dade2'; // Azul mais apagado para o item selecionado
+            }
+        });
+    });
+</script>
+</body>
+</html>
