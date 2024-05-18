@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- define o cabeçalho da pagina no geral-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Nicoleti Martins - Portfólio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Portifólio Pessoal - Thiago Nicoleti Martins</h1> <!-- Define o nome do Titulo da página -->
+        <nav>
+            <ul class="menu">  <!-- Define o menu da pagina -->
+                <li><a href="index.html" class="menu-item">Portfólio</a></li>
+                <li><a href="sobre-mim.html" class="menu-item">Sobre Mim</a></li>
+                <li><a href="experiencia.html" class="menu-item">Experiência</a></li>
+                <li><a href="contato.html" class="menu-item">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+          <!-- Define nome do projeto, descrição e imagenm por seção-->
+        <h2>Meus Projetos básicos de treinamento</h2>
+        <div class="projeto-container">
+            <section class="projeto">
+                <h3>Blog com cadastro de usuário</h3>
+                <img src="img/blog.jpg" alt="Blog Thiago Nicoleti" style="max-width: 300px; height: auto;">
+                <p>Criei um projeto em Ruby on Rails, onde obtive conhecimento e práticas de desenvolvimento web. Nesse projeto também aprendi a como virtualizar um sistema operacional
+                    secundário, como o Linux em uma máquina com OS Windows. Utilizando os frameworks necessário pude acelerar o projeto, que também possui validação de usuário.
+                    - Foi utilizado:<br>
+                <li>CSS</li>
+                <li>HTML</li>
+                <li>JavaScript</li>
+                <li>Ruby on Rails</li>
+                <li>Bootstrap</li>
+                <li><a href="https://github.com/ThiagoNM88/Bolg-Thiago_Nicoleti">GitHub - Blog</a></li>
+                </p>
+            </section>
+            <section class="projeto">
+                <h3>Cadstro Simples de Funcionários</h3>
+                <img src="img/spring.jpg" alt="Blog Thiago Nicoleti" style="max-width: 300px; height: auto;">
+                <p>Criei um projeto em JAVA + Spring Boot, onde obtive conhecimento e práticas de desenvolvimento web via JAVA. Nesse projeto também aprendi como trabalhar em backend, banco de dados, docker e microserviços, como o Linux em uma máquina com OS Windows. Utilizando os frameworks necessário pude acelerar o projeto.
+                Foi utilizado:<br>
+                <li>JAVA</li>
+                <li>JPA</li>
+                <li>SpringBoot</li>
+                <li><a href="https://github.com/ThiagoNM88/account">GitHub - Account</a></li>
+            </section>
+        </div>
+    </main>
+    
+
+    <footer>
+        <p>&copy; 2024 Thiago Nicoleti</p>   <!-- Nome rodapé-->
+    </footer>
+
+ 
+    <script>
+        // JavaScript para fazer a função de quando clicar no link o background fica um azul apagado
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuItems = document.querySelectorAll('.menu-item');
+
+            // Função para remover classe ativa de todos os itens de menu
+            function removeActiveClass() {
+                menuItems.forEach(item => {
+                    item.style.backgroundColor = '#3498db'; // Azul padrão
+                });
+            }
+
+            // Verifica em qual link esta do menu e aplica a funçao remover cor padrão
+            menuItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    removeActiveClass();
+                    this.style.backgroundColor = '#5dade2'; // Azul mais apagado para o item selecionado
+                });
+            });
+
+            // Marca o link com base na url atual
+            const currentPath = window.location.pathname.split("/").pop();
+            menuItems.forEach(item => {
+                if (item.getAttribute('href') === currentPath) {
+                    item.style.backgroundColor = '#5dade2'; // Azul mais apagado para o item selecionado
+                }
+            });
+        });
+    </script>
+</body>
+</html>
